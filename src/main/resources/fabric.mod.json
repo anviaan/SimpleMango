@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "simplemango",
+  "version": "${version}",
+
+  "name": "Simple Mod",
+  "description": "Adds a new tree, which has a new type of wood and a new fruit, the mango.",
+  "authors": [
+    "anvian"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/simplemango/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.anvian.simplemango.MangoMod"
+    ]
+  },
+  "mixins": [
+    "simplemango.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
