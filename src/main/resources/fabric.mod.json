@@ -3,7 +3,7 @@
   "id": "simplemango",
   "version": "${version}",
 
-  "name": "Simple Mod",
+  "name": "Simple Mango",
   "description": "Adds a new tree, which has a new type of wood and a new fruit, the mango.",
   "authors": [
     "anvian"
