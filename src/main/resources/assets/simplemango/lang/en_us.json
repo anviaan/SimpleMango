@@ -1,6 +1,8 @@
 {
-  "ItemGroup.simplemango.mango": "Mango Mod",
+  "itemGroup.simplemango.mango": "Mango Mod",
 
   "item.simplemango.mango": "Mango",
-  "item.simplemango.seed": "Mango's Seed"
+  "item.simplemango.seed": "Mango's Seed",
+
+  "block.simplemango.blockofmango" : "Block of Mango"
 }

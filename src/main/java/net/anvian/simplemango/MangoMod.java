@@ -1,5 +1,6 @@
 package net.anvian.simplemango;
 
+import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
@@ -14,5 +15,7 @@ public class MangoMod implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ModItems.registerModItems();
+
+		ModBlocks.registerModBlocks();
 	}
 }
