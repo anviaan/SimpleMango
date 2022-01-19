@@ -5,7 +5,9 @@ import net.anvian.simplemango.item.MangoItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -16,6 +18,21 @@ public class ModBlocks {
 
     public static final Block BLOCKOFMANGO = registerBlock("blockofmango",
             new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f).requiresTool().breakByHand(true)));
+
+    public static final Block MANGO_LOG = registerBlock("mango_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+
+    public static final Block MANGO_WOOD = registerBlock("mango_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
+
+    public static final Block STRIPPED_MANGO_LOG = registerBlock("stripped_mango_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final Block STRIPPED_MANGO_WOOD = registerBlock("stripped_mango_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final Block MANGO_PLANKS = registerBlock("mango_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

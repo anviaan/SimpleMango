@@ -4,5 +4,10 @@
   "item.simplemango.mango": "Mango",
   "item.simplemango.seed": "Mango's Seed",
 
-  "block.simplemango.blockofmango" : "Block of Mango"
+  "block.simplemango.blockofmango" : "Block of Mango",
+  "block.simplemango.mango_log" : "Mango Log",
+  "block.simplemango.mango_wood" : "Mango Wodd",
+  "block.simplemango.stripped_mango_log" : "Stripped Mango Log",
+  "block.simplemango.stripped_mango_wood" : "Stripped Mango Wood",
+  "block.simplemango.mango_planks" : "Mango Planks"
 }
