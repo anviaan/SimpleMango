@@ -15,8 +15,7 @@ public class ModBlocks {
 
 
     public static final Block BLOCKOFMANGO = registerBlock("blockofmango",
-            new Block(FabricBlockSettings.of(Material.WOOD).strength(1f).requiresTool()));
-
+            new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f).requiresTool().breakByHand(true)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
