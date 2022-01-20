@@ -44,9 +44,18 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.MANGO_PLANKS.getDefaultState(),
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
                             .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+
     //slab
     public static final Block MANGO_SLAB = registerBlock("mango_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
+                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+
+    //fences
+    public static final Block MANGO_FENCE = registerBlock("mango_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
+                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+    public static final Block MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
 
 

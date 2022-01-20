@@ -11,5 +11,7 @@
   "block.simplemango.stripped_mango_wood" : "Stripped Mango Wood",
   "block.simplemango.mango_planks" : "Mango Planks",
   "block.simplemango.mango_stair" : "Mango Stair",
-  "block.simplemango.mango_slab" : "Mango Slab"
+  "block.simplemango.mango_slab" : "Mango Slab",
+  "block.simplemango.mango_fence" : "Mango Fence",
+  "block.simplemango.mango_fence_gate" : "Mango Fence Gate"
 }
