@@ -4,6 +4,7 @@ import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.item.ModItems;
 import net.anvian.simplemango.registries.ModRegistries;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,6 +19,11 @@ public class MangoMod implements ModInitializer {
 		ModItems.registerModItems();
 
 		ModBlocks.registerModBlocks();
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_LOG,5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_PLANKS, 20,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_WOOD,5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_MANGO_LOG,5,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_MANGO_WOOD,5,5);
 
 		ModRegistries.registerStrippables();
 	}
