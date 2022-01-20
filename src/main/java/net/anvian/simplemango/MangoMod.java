@@ -4,7 +4,9 @@ import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.item.ModItems;
 import net.anvian.simplemango.registries.ModRegistries;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.minecraft.client.render.RenderLayer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,6 +30,9 @@ public class MangoMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_SLAB,20,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_FENCE,20,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_FENCE_GATE,20,5);
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANGO_TRAPDOOR, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANGO_DOOR, RenderLayer.getCutout());
 
 		ModRegistries.registerStrippables();
 	}
