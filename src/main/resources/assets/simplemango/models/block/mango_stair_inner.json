@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "simplemango:block/mango_planks",
+    "top": "simplemango:block/mango_planks",
+    "side": "simplemango:block/mango_planks"
+  }
+}

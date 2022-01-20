@@ -1,6 +1,7 @@
 package net.anvian.simplemango.block;
 
 import net.anvian.simplemango.MangoMod;
+import net.anvian.simplemango.block.custom.ModStairsBlock;
 import net.anvian.simplemango.item.MangoItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -14,10 +15,11 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
-
+    //mangoblock
     public static final Block BLOCKOFMANGO = registerBlock("blockofmango",
             new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f).breakByHand(true)));
 
+    //logs
     public static final Block MANGO_LOG = registerBlock("mango_log",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
                     .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)));
@@ -36,6 +38,17 @@ public class ModBlocks {
 
     public static final Block MANGO_PLANKS = registerBlock("mango_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).breakByTool(FabricToolTags.AXES)));
+
+    //stair
+    public static final Block MANGO_STAIR = registerBlock("mango_stair",
+            new ModStairsBlock(ModBlocks.MANGO_PLANKS.getDefaultState(),
+                    FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
+                            .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+    //slab
+    public static final Block MANGO_SLAB = registerBlock("mango_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
+                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
