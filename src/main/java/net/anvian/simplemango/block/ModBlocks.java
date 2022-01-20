@@ -1,7 +1,9 @@
 package net.anvian.simplemango.block;
 
 import net.anvian.simplemango.MangoMod;
+import net.anvian.simplemango.block.custom.ModPressurePlateBlock;
 import net.anvian.simplemango.block.custom.ModStairsBlock;
+import net.anvian.simplemango.block.custom.ModWoodButton;
 import net.anvian.simplemango.item.MangoItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -56,6 +58,17 @@ public class ModBlocks {
                     .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
     public static final Block MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
             new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
+                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+
+    //button
+    public static final Block MANGO_BUTTON = registerBlock("mango_button",
+            new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
+                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+
+    //presure_plate
+    public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
 
 
