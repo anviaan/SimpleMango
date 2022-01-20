@@ -4,6 +4,7 @@ import net.anvian.simplemango.MangoMod;
 import net.anvian.simplemango.item.MangoItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -20,19 +21,19 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f).requiresTool().breakByHand(true)));
 
     public static final Block MANGO_LOG = registerBlock("mango_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).requiresTool()));
 
     public static final Block MANGO_WOOD = registerBlock("mango_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).requiresTool().breakByHand(true)));
 
     public static final Block STRIPPED_MANGO_LOG = registerBlock("stripped_mango_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).requiresTool().breakByHand(true)));
 
     public static final Block STRIPPED_MANGO_WOOD = registerBlock("stripped_mango_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)));
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).requiresTool().breakByHand(true)));
 
     public static final Block MANGO_PLANKS = registerBlock("mango_planks",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).requiresTool()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
