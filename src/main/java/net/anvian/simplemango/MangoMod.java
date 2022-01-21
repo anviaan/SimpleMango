@@ -35,5 +35,6 @@ public class MangoMod implements ModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MANGO_DOOR, RenderLayer.getCutout());
 
 		ModRegistries.registerStrippables();
+		ModRegistries.VillagerTrades();
 	}
 }
