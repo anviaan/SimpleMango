@@ -33,7 +33,7 @@ public class ModItems {
                      new FabricItemSettings().group(MangoItemGroup.MANGO)));
 
     public static final Item GOLDEN_MANGO =  registerItem("golden_mango",
-            new Item(new FabricItemSettings().food(new FoodComponent.Builder()
+            new Mango(new FabricItemSettings().food(new FoodComponent.Builder()
                     .hunger(4)
                     .alwaysEdible()
                     .saturationModifier(1.25f)

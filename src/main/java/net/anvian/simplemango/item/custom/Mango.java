@@ -3,7 +3,6 @@ package net.anvian.simplemango.item.custom;
 import net.anvian.simplemango.item.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -25,7 +24,6 @@ public class Mango extends Item {
                 player.dropItem(retval,false);
             }
         }
-
 
         return super.finishUsing(stack, world, user);
     }
