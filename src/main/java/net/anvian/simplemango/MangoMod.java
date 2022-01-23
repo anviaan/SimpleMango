@@ -5,6 +5,7 @@ import net.anvian.simplemango.item.ModItems;
 import net.anvian.simplemango.registries.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.client.render.RenderLayer;
 import org.apache.logging.log4j.LogManager;
@@ -36,5 +37,7 @@ public class MangoMod implements ModInitializer {
 
 		ModRegistries.registerStrippables();
 		ModRegistries.VillagerTrades();
+
+		CompostingChanceRegistry.INSTANCE.add(ModItems.SEED,0.25f);
 	}
 }
