@@ -4,13 +4,12 @@
   "version": "${version}",
 
   "name": "Simple Mango",
-  "description": "Adds a new tree, which has a new type of wood and a new fruit, the mango.",
+  "description": "Adds a food Mango!, which has a new type of wood and a new fruit, new trades and more",
   "authors": [
     "anvian"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/anviaan/SimpleMango"
   },
 
   "license": "MIT",
