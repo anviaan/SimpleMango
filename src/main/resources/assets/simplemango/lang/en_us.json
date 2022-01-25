@@ -20,5 +20,7 @@
   "block.simplemango.mango_button" : "Mango Button",
   "block.simplemango.mango_pressure_plate" : "Mango Pressure plate",
   "block.simplemango.mango_door" : "Mango door",
-  "block.simplemango.mango_trapdoor" : "Mango Trapdoor"
+  "block.simplemango.mango_trapdoor" : "Mango Trapdoor",
+  "block.simplemango.mango_leaves": "Mango Leaves",
+  "block.simplemango.mango_sapling": "Mango Sapling"
 }

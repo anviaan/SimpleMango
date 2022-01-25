@@ -3,6 +3,7 @@ package net.anvian.simplemango.block;
 import net.anvian.simplemango.MangoMod;
 import net.anvian.simplemango.block.custom.*;
 import net.anvian.simplemango.item.MangoItemGroup;
+import net.anvian.simplemango.world.features.tree.MangoSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -63,7 +64,7 @@ public class ModBlocks {
             new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
 
-    //presure_plate
+    //pressure_plate
     public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
@@ -77,6 +78,13 @@ public class ModBlocks {
     public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
             new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(20.f,2.f)
                     .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD).nonOpaque()));
+
+    public static final Block MANGO_LEAVES = registerBlock("mango_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+
+    public static final Block MANGO_SAPLING = registerBlock("mango_sapling",
+            new ModSaplingBlock(new MangoSaplingGenerator(),
+                    FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
 
     private static Block registerBlock(String name, Block block){
