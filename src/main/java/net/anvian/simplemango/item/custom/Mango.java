@@ -18,8 +18,7 @@ public class Mango extends Item {
         if (stack.isEmpty()){
             return retval;
         }else{
-            if (user instanceof PlayerEntity){
-                PlayerEntity player = (PlayerEntity) user;
+            if (user instanceof PlayerEntity player){
                 if (!player.isCreative() && !player.getInventory().insertStack(retval))
                 player.dropItem(retval,false);
             }
