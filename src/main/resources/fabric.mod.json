@@ -19,6 +19,9 @@
   "entrypoints": {
     "main": [
       "net.anvian.simplemango.MangoMod"
+    ],
+    "client": [
+      "net.anvian.simplemango.MangoModClient"
     ]
   },
   "mixins": [

@@ -3,7 +3,7 @@ package net.anvian.simplemango;
 import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.item.ModItems;
 import net.anvian.simplemango.registries.ModRegistries;
-import net.anvian.simplemango.util.ModRenderHelper;
+import net.anvian.simplemango.util.ModLootTableModifiers;
 import net.anvian.simplemango.world.features.ModConfiguredFeatures;
 import net.anvian.simplemango.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
@@ -22,11 +22,9 @@ public class MangoMod implements ModInitializer {
 
 		ModConfiguredFeatures.registerConfiguredFeatures();
 
-		ModRenderHelper.setRenderLayers();
-
 		ModItems.registerModItems();
-
 		ModBlocks.registerModBlocks();
+
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_LOG,5,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_PLANKS, 20,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_WOOD,5,5);
@@ -37,10 +35,10 @@ public class MangoMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_FENCE,20,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_FENCE_GATE,20,5);
 
+		ModLootTableModifiers.modifyLootTable();
+
 		ModRegistries.registerStrippables();
 		ModRegistries.VillagerTrades();
-
-		ModConfiguredFeatures.registerConfiguredFeatures();
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.SEED,0.25f);
 
