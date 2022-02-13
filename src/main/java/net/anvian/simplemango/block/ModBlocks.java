@@ -23,61 +23,61 @@ public class ModBlocks {
     //logs
     public static final Block MANGO_LOG = registerBlock("mango_log",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)));
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
 
     public static final Block MANGO_WOOD = registerBlock("mango_wood",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)));
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
 
     public static final Block STRIPPED_MANGO_LOG = registerBlock("stripped_mango_log",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)));
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
 
     public static final Block STRIPPED_MANGO_WOOD = registerBlock("stripped_mango_wood",
             new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).breakByTool(FabricToolTags.AXES)));
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
 
     public static final Block MANGO_PLANKS = registerBlock("mango_planks",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).breakByTool(FabricToolTags.AXES)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
 
     //stair
     public static final Block MANGO_STAIR = registerBlock("mango_stair",
             new ModStairsBlock(ModBlocks.MANGO_PLANKS.getDefaultState(),
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
-                            .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+                           .sounds(BlockSoundGroup.WOOD)));
 
     //slab
     public static final Block MANGO_SLAB = registerBlock("mango_slab",
             new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
-                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+                    .sounds(BlockSoundGroup.WOOD)));
 
     //fences
     public static final Block MANGO_FENCE = registerBlock("mango_fence",
             new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+                    .sounds(BlockSoundGroup.WOOD)));
     public static final Block MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
             new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+                    .sounds(BlockSoundGroup.WOOD)));
 
     //button
     public static final Block MANGO_BUTTON = registerBlock("mango_button",
-            new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+            new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 2.0f)
+                    .sounds(BlockSoundGroup.WOOD)));
 
     //pressure_plate
     public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD)));
+                    .sounds(BlockSoundGroup.WOOD)));
 
     //door
     public static final Block MANGO_DOOR = registerBlock("mango_door",
-            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(20.f,2.f)
-                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD).nonOpaque()));
+            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f,2.f)
+                    .sounds(BlockSoundGroup.WOOD).nonOpaque()));
     //trapdoor
     public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(20.f,2.f)
-                    .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD).nonOpaque()));
+            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f,2.f)
+                    .sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
     //leaves
     public static final Block MANGO_LEAVES = registerBlock("mango_leaves",

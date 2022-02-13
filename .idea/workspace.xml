@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e70c71a4-f321-463d-a470-a781b1c57cee" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/SimpleMango.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/SimpleMango.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/block/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/item/ModArmorMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/item/ModArmorMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/item/custom/ModSeed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/util/ModRenderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/util/ModRenderHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/world/features/ModConfiguredFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/world/features/ModConfiguredFeatures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/world/features/ModPlacedFeatures.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/world/features/tree/MangoSaplingGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/world/features/tree/MangoSaplingGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/world/gen/ModTreeGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/world/gen/ModTreeGeneration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fabric.mod.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
