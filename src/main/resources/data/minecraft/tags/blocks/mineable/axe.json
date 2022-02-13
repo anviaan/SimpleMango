@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "simplemango:mango_log",
+    "simplemango:mango_wood",
+    "simplemango:stripped_mango_log",
+    "simplemango:stripped_mango_wood",
+    "simplemango:mango_planks",
+    "simplemango:mango_stair",
+    "simplemango:mango_slab",
+    "simplemango:mango_fence",
+    "simplemango:mango_fence_gate",
+    "simplemango:mango_door",
+    "simplemango:mango_trapdoor",
+    "simplemango:mango_pressure_plate"
+  ]
+}
