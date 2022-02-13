@@ -38,7 +38,7 @@
                   ]
                 }
               ],
-              "name": "simplemango:seed"
+              "name": "simplemango:mango_sapling"
             },
             {
               "type": "minecraft:item",
