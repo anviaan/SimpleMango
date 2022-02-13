@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e70c71a4-f321-463d-a470-a781b1c57cee" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/SimpleMango.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/SimpleMango.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/block/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/anvian/simplemango/block/ModBlocks.java" afterDir="false" />
-    </list>
+    <list default="true" id="e70c71a4-f321-463d-a470-a781b1c57cee" name="Changes" comment="bugs fixed and a bug created duplicate doors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -376,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643385414162</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="bugs fixed and a bug created duplicate doors">
+      <created>1644719142836</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1644719142836</updated>
+    </task>
+    <task id="LOCAL-00032" summary="bugs fixed and a bug created duplicate doors">
+      <created>1644719179810</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1644719179810</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,7 +401,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logs loot table added, and break by hand added" />
     <MESSAGE value="log block modified" />
     <MESSAGE value="add Flammable registry" />
     <MESSAGE value="break by tool added" />
@@ -416,7 +425,8 @@
     <MESSAGE value="loot table chest added and cliend added" />
     <MESSAGE value="es_es and es_mx lang added" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="bugs fixed and a bug created duplicate doors" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugs fixed and a bug created duplicate doors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
