@@ -60,7 +60,7 @@ public class ModBlocks {
 
     //button
     public static final Block MANGO_BUTTON = registerBlock("mango_button",
-            new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
+            new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 2.0f)
                     .breakByHand(true).sounds(BlockSoundGroup.WOOD)));
 
     //pressure_plate
@@ -75,7 +75,7 @@ public class ModBlocks {
                    .sounds(BlockSoundGroup.WOOD).nonOpaque()));
     //trapdoor
     public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f,2.f)
+            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.5f,2.f)
                     .sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
     //leaves
