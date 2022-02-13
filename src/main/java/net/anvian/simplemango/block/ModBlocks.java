@@ -79,12 +79,13 @@ public class ModBlocks {
             new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(20.f,2.f)
                     .breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
+    //leaves
     public static final Block MANGO_LEAVES = registerBlock("mango_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
 
     public static final Block MANGO_SAPLING = registerBlock("mango_sapling",
             new ModSaplingBlock(new MangoSaplingGenerator(),
-                    FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)));
 
 
     private static Block registerBlock(String name, Block block){

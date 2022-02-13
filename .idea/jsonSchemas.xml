@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="Minecraft Data Pack Recipe">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="Minecraft Data Pack Recipe" />
+              <option name="relativePathToSchema" value="https://json.schemastore.org/minecraft-recipe.json" />
+              <option name="applicationDefined" value="true" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/data/simplemango/recipes/blockofmango.json" />
+                  </Item>
+                  <Item>
+                    <option name="path" value="src/main/resources/data/simplemango/recipes/mango_seed_helmet.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>
