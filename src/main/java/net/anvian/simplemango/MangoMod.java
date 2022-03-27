@@ -34,6 +34,7 @@ public class MangoMod implements ModInitializer {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_SLAB,20,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_FENCE,20,5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_FENCE_GATE,20,5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MANGO_LEAVES,30,60);
 
 		ModLootTableModifiers.modifyLootTable();
 

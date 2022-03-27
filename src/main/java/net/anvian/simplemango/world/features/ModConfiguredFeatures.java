@@ -24,7 +24,7 @@ public class ModConfiguredFeatures {
                     new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                     new TwoLayersFeatureSize(1, 0, 2)).build()));
 
-    public static final ConfiguredFeature<RandomFeatureConfig, ?> MANGO_TREE_RANDOM = register("cherry_blossom_feature",
+    public static final ConfiguredFeature<RandomFeatureConfig, ?> MANGO_TREE_RANDOM = register("mango_feature",
             Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(List.of(new RandomFeatureEntry(
                     MANGO_TREE.withWouldSurviveFilter(ModBlocks.MANGO_SAPLING), 0.1f)),
                     MANGO_TREE.withWouldSurviveFilter(ModBlocks.MANGO_SAPLING))));

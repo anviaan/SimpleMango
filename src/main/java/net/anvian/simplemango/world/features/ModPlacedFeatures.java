@@ -10,9 +10,9 @@ import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> MANGO_PLACED_KEY = registerKey("cherry_blossom_placed");
+    public static final RegistryKey<PlacedFeature> MANGO_PLACED_KEY = registerKey("mango_placed");
 
-    public static final PlacedFeature MANGO_PLACED = registerPlacedFeature("cherry_blossom_placed",
+    public static final PlacedFeature MANGO_PLACED = registerPlacedFeature("mango_placed",
             ModConfiguredFeatures.MANGO_TREE_RANDOM.withPlacement(VegetationPlacedFeatures.modifiers(
                     PlacedFeatures.createCountExtraModifier(2, 0.2f, 3))));
 
