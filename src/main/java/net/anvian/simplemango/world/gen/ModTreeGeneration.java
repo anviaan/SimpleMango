@@ -10,6 +10,6 @@ import net.minecraft.world.gen.GenerationStep;
 public class ModTreeGeneration {
     public static void generateTrees() {
         BiomeModifications.addFeature(BiomeSelectors.categories(Biome.Category.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MANGO_PLACED_KEY);
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MANGO_PLACED.getKey().get());
     }
 }

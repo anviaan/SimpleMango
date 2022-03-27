@@ -17,7 +17,7 @@ public class ModBlocks {
 
     //mangoblock
     public static final Block BLOCKOFMANGO = registerBlock("blockofmango",
-            new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f).breakByHand(true)));
+            new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f)));
 
     //logs
     public static final Block MANGO_LOG = registerBlock("mango_log",
@@ -61,7 +61,7 @@ public class ModBlocks {
     //button
     public static final Block MANGO_BUTTON = registerBlock("mango_button",
             new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 2.0f)
-                    .breakByHand(true).sounds(BlockSoundGroup.WOOD)));
+                    .sounds(BlockSoundGroup.WOOD)));
 
     //pressure_plate
     public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
@@ -80,7 +80,7 @@ public class ModBlocks {
 
     //leaves
     public static final Block MANGO_LEAVES = registerBlock("mango_leaves",
-            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()));
 
     //sapling
     public static final Block MANGO_SAPLING = registerBlock("mango_sapling",
