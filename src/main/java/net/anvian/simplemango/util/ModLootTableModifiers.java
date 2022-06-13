@@ -1,8 +1,9 @@
 package net.anvian.simplemango.util;
 
 import net.anvian.simplemango.item.ModItems;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -19,30 +20,29 @@ public class ModLootTableModifiers {
             new Identifier("minecraft", "chests/desert_pyramid");
 
     public static void modifyLootTable(){
-        LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
-            if(END_CITY_ID.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+        LootTableEvents.MODIFY.register(((resourceManager, manager, id, supplier, setter) -> {
+            if(END_CITY_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.031f))
                         .with(ItemEntry.builder(ModItems.ENCHANTED_GOLDEN_MANGO))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f,1.0f)).build());//entre 1 o 1
-                supplier.withPool(poolBuilder.build());
-            }
-            if(RUINED_PORTAL_ID.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());//entre 1 o 1
+                supplier.pool(poolBuilder.build());
+            }if(RUINED_PORTAL_ID.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.015f))
                         .with(ItemEntry.builder(ModItems.ENCHANTED_GOLDEN_MANGO))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f,1.0f)).build());//entre 1 o 1
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f,1.0f)).build());//entre 1 o 1
+                supplier.pool(poolBuilder.build());
             }
             if(DESERT_PYRAMID_ID.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.026f))
                         .with(ItemEntry.builder(ModItems.ENCHANTED_GOLDEN_MANGO))
-                        .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f,1.0f)).build());//entre 1 o 1
-                supplier.withPool(poolBuilder.build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f,1.0f)).build());//entre 1 o 1
+                supplier.pool(poolBuilder.build());
             }
         }));
     }
