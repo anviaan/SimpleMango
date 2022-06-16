@@ -1,7 +1,6 @@
 package net.anvian.simplemango.util;
 
 import net.anvian.simplemango.item.ModItems;
-import net.fabricmc.fabric.api.loot.v2.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
