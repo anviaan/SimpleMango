@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "simplemango:block/stripped_mango_log_top",
-    "side": "simplemango:block/stripped_mango_log"
-  }
-}
