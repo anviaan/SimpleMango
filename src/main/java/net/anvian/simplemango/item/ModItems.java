@@ -5,7 +5,9 @@ import net.anvian.simplemango.item.custom.EnchantedGoldenMango;
 import net.anvian.simplemango.item.custom.Mango;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +24,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()
                     .rarity(Rarity.COMMON)
                     .tab(MangoItemGroup.MANGO)));
+    public static final RegistryObject<Item> MANGO_SEED_HELMET = ITEMS.register("mango_seed_helmet",
+            () -> new ArmorItem(ModArmorMaterial.SEED, EquipmentSlot.HEAD,
+                    new Item.Properties().tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
             () -> new Mango(new Item.Properties()
                     .food(new FoodProperties.Builder()
@@ -43,6 +48,7 @@ public class ModItems {
                     .tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> ENCHANTED_GOLDEN_MANGO = ITEMS.register("enchanted_golden_mango",
             () -> new EnchantedGoldenMango(new Item.Properties()
+                    .rarity(Rarity.UNCOMMON)
                     .food(new FoodProperties.Builder()
                             .nutrition(4)
                             .alwaysEat()
@@ -50,7 +56,7 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400,1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,3600,0),1.0f)
-                            .effect(new MobEffectInstance(MobEffects.HARM,6000,1),1.0f)
+                            .effect(new MobEffectInstance(MobEffects.DIG_SPEED,6000,1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,3000,0),1.0f)
                             .build())
                     .tab(MangoItemGroup.MANGO)));
