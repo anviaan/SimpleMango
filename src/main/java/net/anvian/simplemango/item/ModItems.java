@@ -1,9 +1,10 @@
 package net.anvian.simplemango.item;
 
 import net.anvian.simplemango.SimpleMangoMod;
+import net.anvian.simplemango.item.custom.EnchantedGoldenMango;
+import net.anvian.simplemango.item.custom.Mango;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -22,7 +23,7 @@ public class ModItems {
                     .rarity(Rarity.COMMON)
                     .tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
-            () -> new Item(new Item.Properties()
+            () -> new Mango(new Item.Properties()
                     .food(new FoodProperties.Builder()
                             .nutrition(4)
                             .saturationMod(0.875f)
@@ -30,7 +31,7 @@ public class ModItems {
                     .rarity(Rarity.COMMON)
                     .tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> GOLDEN_MANGO = ITEMS.register("golden_mango",
-            () -> new Item(new Item.Properties()
+            () -> new Mango(new Item.Properties()
                     .food(new FoodProperties.Builder()
                             .nutrition(4)
                             .alwaysEat()
@@ -41,7 +42,7 @@ public class ModItems {
                             .build())
                     .tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> ENCHANTED_GOLDEN_MANGO = ITEMS.register("enchanted_golden_mango",
-            () -> new Item(new Item.Properties()
+            () -> new EnchantedGoldenMango(new Item.Properties()
                     .food(new FoodProperties.Builder()
                             .nutrition(4)
                             .alwaysEat()
@@ -51,7 +52,8 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,3600,0),1.0f)
                             .effect(new MobEffectInstance(MobEffects.HARM,6000,1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,3000,0),1.0f)
-                            .build())));
+                            .build())
+                    .tab(MangoItemGroup.MANGO)));
 
 
 
