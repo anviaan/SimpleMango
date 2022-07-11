@@ -1,6 +1,7 @@
 package net.anvian.simplemango;
 
 import com.mojang.logging.LogUtils;
+import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,6 +22,7 @@ public class SimpleMangoMod
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 

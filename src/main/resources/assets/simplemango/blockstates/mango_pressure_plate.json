@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "simplemango:block/mango_pressure_plate" },
+    "powered=true": { "model": "simplemango:block/mango_pressure_plate_down" }
+  }
+}
