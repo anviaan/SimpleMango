@@ -31,9 +31,7 @@ logoFile="simplemango.png" #optional
 # A text field displayed in the mod UI
 authors="anvian" #optional
 # The description text for the mod (multi line!) (#mandatory)
-description='''
-Adds a food Mango!, which has a new type of wood and a new fruit, new trades and more.
-'''
+description="Adds a food Mango!, which has a new type of wood and a new fruit, new trades and more."
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.simplemango]] #optional
     # the modid of the dependency
