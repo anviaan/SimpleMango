@@ -43,6 +43,7 @@ public class ModItems {
                     .tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> ENCHANTED_GOLDEN_MANGO = ITEMS.register("enchanted_golden_mango",
             () -> new EnchantedGoldenMango(new Item.Properties()
+                    .rarity(Rarity.UNCOMMON)
                     .food(new FoodProperties.Builder()
                             .nutrition(4)
                             .alwaysEat()
@@ -50,7 +51,7 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400,1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,3600,0),1.0f)
-                            .effect(new MobEffectInstance(MobEffects.HARM,6000,1),1.0f)
+                            .effect(new MobEffectInstance(MobEffects.DIG_SPEED,6000,1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,3000,0),1.0f)
                             .build())
                     .tab(MangoItemGroup.MANGO)));
