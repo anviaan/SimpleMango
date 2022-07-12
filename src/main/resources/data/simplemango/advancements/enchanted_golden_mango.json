@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "simplemango:enchanted_golden_mango"
+    },
+    "title": "I feel very powerful",
+    "description": "Eat a Enchanted Golden Mango",
+    "frame": "challenge",
+    "show_toast": true,
+    "annouce_to_chat": true
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "simplemango:simplemango",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items" : [
+          {
+            "items": [
+              "simplemango:enchanted_golden_mango"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "simplemango:mango_seed_helmet"
+    },
+    "title": "You feel lucky",
+    "description": "Wear a mango seed helmet",
+    "frame": "task",
+    "show_toast": true,
+    "annouce_to_chat": true
+  },
+  "rewards": {
+    "experience": 30
+  },
+  "parent": "simplemango:simplemango",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items" : [
+          {
+            "items": [
+              "simplemango:mango_seed_helmet"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

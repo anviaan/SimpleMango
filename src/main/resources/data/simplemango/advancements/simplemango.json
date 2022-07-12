@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "simplemango:mango"
+    },
+    "title": "A delicious Mango",
+    "description": "Get a mango from jungle trees",
+    "frame": "task",
+    "show_toast": true,
+    "annouce_to_chat": true,
+    "background": "simplemango:textures/block/blockofmango_top.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simplemango:mango"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
