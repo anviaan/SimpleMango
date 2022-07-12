@@ -34,6 +34,9 @@ public class SimpleMangoMod
     }
 
     private void clientSetup(final FMLCommonSetupEvent event){
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANGO_DOOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANGO_TRAPDOOR.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANGO_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANGO_SAPLING.get(), RenderType.cutout());
     }

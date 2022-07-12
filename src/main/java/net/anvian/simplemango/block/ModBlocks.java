@@ -9,12 +9,10 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -80,6 +78,39 @@ public class ModBlocks {
             () -> new SaplingBlock(new MangoTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),
             MangoItemGroup.MANGO);
 
+    //stairs
+    public static final RegistryObject<Block> MANGO_STAIR = registerBlock("mango_stair",
+            () -> new StairBlock(() -> ModBlocks.MANGO_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.WOOD).strength(5f).requiresCorrectToolForDrops()),
+            MangoItemGroup.MANGO);
+    //slab
+    public static final RegistryObject<Block> MANGO_SLAB = registerBlock("mango_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
+    //fence
+    public static final RegistryObject<Block> MANGO_FENCE = registerBlock("mango_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
+    public static final RegistryObject<Block> MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
+    //button
+    public static final RegistryObject<Block> MANGO_BUTTON = registerBlock("mango_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops().noCollission()), MangoItemGroup.MANGO);
+    //pressure_plate
+    public static final RegistryObject<Block> MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
+    //door
+    public static final RegistryObject<Block> MANGO_DOOR = registerBlock("mango_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), MangoItemGroup.MANGO);
+    //trapdoor
+    public static final RegistryObject<Block> MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), MangoItemGroup.MANGO);
+    
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
