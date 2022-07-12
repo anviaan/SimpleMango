@@ -3,11 +3,11 @@ package net.anvian.simplemango.item;
 import net.anvian.simplemango.SimpleMangoMod;
 import net.anvian.simplemango.item.custom.EnchantedGoldenMango;
 import net.anvian.simplemango.item.custom.Mango;
+import net.anvian.simplemango.item.custom.ModArmorItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,7 +25,7 @@ public class ModItems {
                     .rarity(Rarity.COMMON)
                     .tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> MANGO_SEED_HELMET = ITEMS.register("mango_seed_helmet",
-            () -> new ArmorItem(ModArmorMaterial.SEED, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterial.SEED, EquipmentSlot.HEAD,
                     new Item.Properties().tab(MangoItemGroup.MANGO)));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
             () -> new Mango(new Item.Properties()
