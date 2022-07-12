@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "value": [
+    "simplemango:mango_log",
+    "simplemango:mango_wood",
+    "simplemango:stripped_mango_log",
+    "simplemango:stripped_mango_wood"
+  ]
+}

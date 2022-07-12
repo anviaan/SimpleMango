@@ -4,12 +4,15 @@ import net.anvian.simplemango.SimpleMangoMod;
 import net.anvian.simplemango.block.custom.ModFlammableRotadedPillarBlock;
 import net.anvian.simplemango.item.MangoItemGroup;
 import net.anvian.simplemango.item.ModItems;
+import net.anvian.simplemango.world.feature.tree.MangoTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,6 +39,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRIPPED_MANGO_WOOD  = registerBlock("stripped_mango_wood",
             () -> new ModFlammableRotadedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
             MangoItemGroup.MANGO);
+    //plank
     public static final RegistryObject<Block> MANGO_PLANKS = registerBlock("mango_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
@@ -51,6 +55,27 @@ public class ModBlocks {
                     return 5;
                 }
             }, MangoItemGroup.MANGO);
+    //leaves
+    public static final RegistryObject<Block> MANGO_LEAVES  = registerBlock("mango_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, MangoItemGroup.MANGO);
+
+    //sapling
+    public static final RegistryObject<Block> MANGO_SAPLING = registerBlock("mango_sapling",
+            () -> new SaplingBlock(new MangoTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),
+            MangoItemGroup.MANGO);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

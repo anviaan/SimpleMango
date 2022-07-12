@@ -3,6 +3,8 @@ package net.anvian.simplemango;
 import com.mojang.logging.LogUtils;
 import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,13 +27,18 @@ public class SimpleMangoMod
         ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    private void clientSetup(final FMLCommonSetupEvent event){
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANGO_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANGO_SAPLING.get(), RenderType.cutout());
+    }
+
     private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
