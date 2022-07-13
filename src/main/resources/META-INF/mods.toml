@@ -15,7 +15,7 @@ modId="simplemango"
 version="1.1.4"
 displayName="SimpleMango Mod"
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
-updateJSONURL="https://gist.githubusercontent.com/anviaan/dccf3ff84c28f50d702c5605b35e34d0/raw/1acda00d74fc5a2fbb0123afd231593b5c2357e9/Json"
+updateJSONURL="https://anvian-page.netlify.app/forge/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/simple-mango"
 authors="anvian"
 
