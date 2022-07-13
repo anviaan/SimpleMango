@@ -1,0 +1,10 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/end_city_treasure"
+    }
+  ],
+  "addition": "simplemango:enchanted_golden_mango",
+  "type": "simplemango:ega_end_city"
+}
