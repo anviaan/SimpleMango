@@ -2,6 +2,7 @@ package net.anvian.simplemango;
 
 import com.mojang.logging.LogUtils;
 import net.anvian.simplemango.block.ModBlocks;
+import net.anvian.simplemango.event.ModComposter;
 import net.anvian.simplemango.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -28,6 +29,7 @@ public class SimpleMangoMod
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
+        eventBus.addListener(ModComposter::init);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
