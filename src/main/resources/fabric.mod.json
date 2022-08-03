@@ -9,7 +9,9 @@
     "anvian"
   ],
   "contact": {
-    "sources": "https://github.com/anviaan/SimpleMango"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/simple-mango",
+    "sources": "https://github.com/anviaan/SimpleMango",
+    "issues": "https://github.com/anviaan/SimpleMango/issues"
   },
 
   "license": "MIT",
@@ -29,9 +31,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.8",
     "fabric": "*",
-    "minecraft": "1.19",
+    "minecraft": "~1.19",
     "java": ">=17"
   },
   "suggests": {
