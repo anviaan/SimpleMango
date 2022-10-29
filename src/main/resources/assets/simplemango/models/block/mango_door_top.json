@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top",
-  "textures": {
-    "top": "simplemango:block/mango_door_top",
-    "bottom": "simplemango:block/mango_door_bottom"
-  }
-}
