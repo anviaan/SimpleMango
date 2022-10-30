@@ -3,5 +3,6 @@
   "textures": {
     "bottom": "simplemango:block/mango_door_bottom",
     "top": "simplemango:block/mango_door_top"
-  }
+  },
+  "render_type": "translucent"
 }
