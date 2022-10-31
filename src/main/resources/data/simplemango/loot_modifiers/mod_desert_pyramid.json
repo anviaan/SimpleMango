@@ -1,0 +1,10 @@
+{
+  "type": "simplemango:mod_desert_pyramid",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/desert_pyramid"
+    }
+  ],
+  "item": "simplemango:enchanted_golden_mango"
+}

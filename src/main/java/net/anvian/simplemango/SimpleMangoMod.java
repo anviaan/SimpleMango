@@ -2,6 +2,7 @@ package net.anvian.simplemango;
 
 import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.event.ModComposter;
+import net.anvian.simplemango.event.loot.ModLootModifiers;
 import net.anvian.simplemango.item.ModItems;
 import net.anvian.simplemango.world.feature.ModConfiguredFeatures;
 import net.anvian.simplemango.world.feature.ModPlacedFeatures;
@@ -22,6 +23,7 @@ public class SimpleMangoMod
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModLootModifiers.register(eventBus);
 
         ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);
