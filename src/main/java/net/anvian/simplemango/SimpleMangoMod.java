@@ -4,6 +4,7 @@ import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.event.ModComposter;
 import net.anvian.simplemango.item.ModItems;
 import net.anvian.simplemango.world.BiomeMod.ModBiomeModifiers;
+import net.anvian.simplemango.world.feature.ModConfiguredFeatures;
 import net.anvian.simplemango.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,6 +24,7 @@ public class SimpleMangoMod
         ModBlocks.register(eventBus);
 
         ModBiomeModifiers.register(eventBus);
+        ModConfiguredFeatures.register(eventBus);
         ModPlacedFeatures.register(eventBus);
 
         eventBus.addListener(this::clientSetup);

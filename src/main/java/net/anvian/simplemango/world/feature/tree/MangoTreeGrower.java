@@ -11,6 +11,6 @@ public class MangoTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pLargeHive) {
-        return ModConfiguredFeatures.MANGO_TREE;
+        return ModConfiguredFeatures.MANGO_TREE.getHolder().get();
     }
 }
