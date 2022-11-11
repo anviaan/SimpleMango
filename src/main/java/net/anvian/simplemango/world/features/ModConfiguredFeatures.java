@@ -23,7 +23,7 @@ public class ModConfiguredFeatures {
                     new TwoLayersFeatureSize(1, 0, 2)).build());
 
     public static final RegistryEntry<PlacedFeature> MANGO_CHECKED =
-            PlacedFeatures.register("mango_checked", MANGO_TREE,
+            PlacedFeatures.register("mango_checked", ModConfiguredFeatures.MANGO_TREE,
                     PlacedFeatures.wouldSurvive(ModBlocks.MANGO_SAPLING));
 
     public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>>MANGO_SPAWN =
