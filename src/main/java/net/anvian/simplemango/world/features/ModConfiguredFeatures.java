@@ -27,7 +27,7 @@ public class ModConfiguredFeatures {
                     PlacedFeatures.wouldSurvive(ModBlocks.MANGO_SAPLING));
 
     public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>>MANGO_SPAWN =
-            ConfiguredFeatures.register("amngo_spawn", Feature.RANDOM_SELECTOR,
+            ConfiguredFeatures.register("mango_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(MANGO_CHECKED, 0.1f)), MANGO_CHECKED));
 
     public static void registerConfiguredFeatures() {
