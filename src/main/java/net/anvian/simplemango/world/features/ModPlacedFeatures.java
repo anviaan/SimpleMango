@@ -8,5 +8,5 @@ import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> MANGO_PLACED = PlacedFeatures.register("mango_placed",
             ModConfiguredFeatures.MANGO_SPAWN, VegetationPlacedFeatures.modifiers(
-                    PlacedFeatures.createCountExtraModifier(2, 0.2f, 3)));
+                    PlacedFeatures.createCountExtraModifier(1, 0.2f, 1)));
 }
