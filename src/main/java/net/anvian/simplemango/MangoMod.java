@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 public class MangoMod implements ModInitializer {
 	public static final String MOD_ID = "simplemango";
-	public static final Logger LOGGER = LogManager.getLogger("modid");
+	public static final Logger LOGGER = LogManager.getLogger("simplemango");
 
 	@Override
 	public void onInitialize() {
@@ -42,6 +42,7 @@ public class MangoMod implements ModInitializer {
 		ModRegistries.VillagerTrades();
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.SEED,0.25f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.MANGO, 0.65f);
 
 		ModWorldGen.generateModWorldGen();
 	}

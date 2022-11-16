@@ -1,7 +1,6 @@
 package net.anvian.simplemango.block;
 
 import net.anvian.simplemango.MangoMod;
-import net.anvian.simplemango.block.custom.*;
 import net.anvian.simplemango.item.MangoItemGroup;
 import net.anvian.simplemango.world.features.tree.MangoSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -41,7 +40,7 @@ public class ModBlocks {
 
     //stair
     public static final Block MANGO_STAIR = registerBlock("mango_stair",
-            new ModStairsBlock(ModBlocks.MANGO_PLANKS.getDefaultState(),
+            new StairsBlock(ModBlocks.MANGO_PLANKS.getDefaultState(),
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
                            .sounds(BlockSoundGroup.WOOD)));
 
@@ -60,22 +59,22 @@ public class ModBlocks {
 
     //button
     public static final Block MANGO_BUTTON = registerBlock("mango_button",
-            new ModWoodButton(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 2.0f)
+            new WoodenButtonBlock(FabricBlockSettings.of(Material.WOOD).strength(1.0f, 2.0f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     //pressure_plate
     public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
-            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .sounds(BlockSoundGroup.WOOD)));
 
     //door
     public static final Block MANGO_DOOR = registerBlock("mango_door",
-            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f,2.f)
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f,2.f)
                    .sounds(BlockSoundGroup.WOOD).nonOpaque()));
     //trapdoor
     public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.5f,2.f)
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(1.5f,2.f)
                     .sounds(BlockSoundGroup.WOOD).nonOpaque()));
 
     //leaves
@@ -84,7 +83,7 @@ public class ModBlocks {
 
     //sapling
     public static final Block MANGO_SAPLING = registerBlock("mango_sapling",
-            new ModSaplingBlock(new MangoSaplingGenerator(),
+            new SaplingBlock(new MangoSaplingGenerator(),
                     FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
 
@@ -97,7 +96,6 @@ public class ModBlocks {
         return Registry.register(Registry.ITEM, new Identifier(MangoMod.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(MangoItemGroup.MANGO)));
     }
-
 
     public static void registerModBlocks(){
         System.out.println("Registering ModBlocks for " + MangoMod.MOD_ID);
