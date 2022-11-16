@@ -42,6 +42,7 @@ public class MangoMod implements ModInitializer {
 		ModRegistries.VillagerTrades();
 
 		CompostingChanceRegistry.INSTANCE.add(ModItems.SEED,0.25f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.MANGO, 0.65f);
 
 		ModWorldGen.generateModWorldGen();
 	}
