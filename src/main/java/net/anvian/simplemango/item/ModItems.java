@@ -1,6 +1,7 @@
 package net.anvian.simplemango.item;
 
 import net.anvian.simplemango.SimpleMangoMod;
+import net.anvian.simplemango.block.ModBlocks;
 import net.anvian.simplemango.item.custom.EnchantedGoldenMango;
 import net.anvian.simplemango.item.custom.Mango;
 import net.anvian.simplemango.item.custom.ModArmorItem;
@@ -9,6 +10,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,11 +21,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, SimpleMangoMod.MOD_ID);
 
-
     public static final RegistryObject<Item> SEED = ITEMS.register("seed",
-            () -> new Item(new Item.Properties()
-                    .rarity(Rarity.COMMON)
-                    .tab(MangoItemGroup.MANGO)));
+            () -> new ItemNameBlockItem(ModBlocks.MANGO_SAPLING.get(), new Item.Properties().rarity(Rarity.COMMON)));
+
     public static final RegistryObject<Item> MANGO_SEED_HELMET = ITEMS.register("mango_seed_helmet",
             () -> new ModArmorItem(ModArmorMaterial.SEED, EquipmentSlot.HEAD,
                     new Item.Properties().tab(MangoItemGroup.MANGO)));
@@ -60,8 +60,6 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,3000,0),1.0f)
                             .build())
                     .tab(MangoItemGroup.MANGO)));
-
-
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
