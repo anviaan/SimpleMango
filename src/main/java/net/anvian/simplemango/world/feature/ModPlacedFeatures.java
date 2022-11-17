@@ -22,7 +22,7 @@ public static final RegistryObject<PlacedFeature> MANGO_CHECKED = PLACED_FEATURE
 
     public static final RegistryObject<PlacedFeature> MANGO_PLACED = PLACED_FEATURES.register("mango_placed",
             () -> new PlacedFeature(ModConfiguredFeatures.MANGO_SPAWN.getHolder().get(), VegetationPlacements.treePlacement(
-                    PlacementUtils.countExtra(2, 0.2f, 3))));
+                    PlacementUtils.countExtra(1, 0.2f, 1))));
 
     public static void register(IEventBus eventBus){
         PLACED_FEATURES.register(eventBus);
