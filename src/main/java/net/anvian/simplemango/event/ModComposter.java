@@ -17,5 +17,6 @@ public class ModComposter extends ComposterBlock{
     }
     public static void registerCompostables(){
         ComposterBlock.COMPOSTABLES.put(ModItems.SEED.get(),0.25f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.MANGO.get(), 0.65f);
     }
 }
