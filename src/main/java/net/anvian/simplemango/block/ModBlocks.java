@@ -81,35 +81,29 @@ public class ModBlocks {
     //stairs
     public static final RegistryObject<Block> MANGO_STAIR = registerBlock("mango_stair",
             () -> new StairBlock(() -> ModBlocks.MANGO_PLANKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.WOOD).strength(5f).requiresCorrectToolForDrops()),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)),
             MangoItemGroup.MANGO);
     //slab
     public static final RegistryObject<Block> MANGO_SLAB = registerBlock("mango_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)), MangoItemGroup.MANGO);
     //fence
     public static final RegistryObject<Block> MANGO_FENCE = registerBlock("mango_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)), MangoItemGroup.MANGO);
     public static final RegistryObject<Block> MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
     //button
     public static final RegistryObject<Block> MANGO_BUTTON = registerBlock("mango_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops().noCollission()), MangoItemGroup.MANGO);
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)), MangoItemGroup.MANGO);
     //pressure_plate
     public static final RegistryObject<Block> MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops()), MangoItemGroup.MANGO);
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)), MangoItemGroup.MANGO);
     //door
     public static final RegistryObject<Block> MANGO_DOOR = registerBlock("mango_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), MangoItemGroup.MANGO);
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)), MangoItemGroup.MANGO);
     //trapdoor
     public static final RegistryObject<Block> MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
-                    .strength(5f).requiresCorrectToolForDrops().noOcclusion()), MangoItemGroup.MANGO);
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)), MangoItemGroup.MANGO);
     
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
