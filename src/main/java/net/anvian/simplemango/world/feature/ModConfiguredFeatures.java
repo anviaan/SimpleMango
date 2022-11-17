@@ -22,7 +22,7 @@ public class ModConfiguredFeatures {
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> MANGO_TREE =
             FeatureUtils.register("mango", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                     BlockStateProvider.simple(ModBlocks.MANGO_LOG.get()),
-                    new StraightTrunkPlacer(3, 4, 2),
+                    new StraightTrunkPlacer(5, 3, 1),
                     BlockStateProvider.simple(ModBlocks.MANGO_LEAVES.get()),
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                     new TwoLayersFeatureSize(1, 0, 2)).build());

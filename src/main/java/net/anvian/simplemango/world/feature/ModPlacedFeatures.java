@@ -8,5 +8,5 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 public class ModPlacedFeatures {
     public static final Holder<PlacedFeature> MANGO_PLACED = PlacementUtils.register("mango_placed",
             ModConfiguredFeatures.MANGO_SPAWN, VegetationPlacements.treePlacement(
-                    PlacementUtils.countExtra(2, 0.2f, 3)));
+                    PlacementUtils.countExtra(1, 0.2f, 1)));
 }
