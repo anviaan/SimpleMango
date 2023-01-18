@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": {
-      "model": "simplemango:block/mango_sapling"
-    }
+    "": { "model": "simplemango:block/mango_sapling" }
   }
 }
