@@ -1,13 +1,19 @@
 package net.anvian.simplemango.item;
 
 import net.anvian.simplemango.MangoMod;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class MangoItemGroup {
-    public static final ItemGroup MANGO = FabricItemGroupBuilder.build
-            (new Identifier(MangoMod.MOD_ID, "mango"),
-                    () -> new ItemStack(ModItems.MANGO));
+    public static ItemGroup MANGO;
+    public static void registerItemGroup(){
+        MANGO = FabricItemGroup.builder(new Identifier(MangoMod.MOD_ID, "mango_item_group"))
+                .displayName(Text.literal("SimpleMango Mod"))
+                .icon(()-> new ItemStack(ModItems.MANGO))
+                .build();
+    }
+
 }
