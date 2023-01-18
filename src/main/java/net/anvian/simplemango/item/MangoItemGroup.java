@@ -11,7 +11,7 @@ public class MangoItemGroup {
     public static ItemGroup MANGO;
     public static void registerItemGroup(){
         MANGO = FabricItemGroup.builder(new Identifier(MangoMod.MOD_ID, "mango_item_group"))
-                .displayName(Text.literal("SimpleMango Mod"))
+                .displayName(Text.translatable("itemGroup.simplemango.mango"))
                 .icon(()-> new ItemStack(ModItems.MANGO))
                 .build();
     }
