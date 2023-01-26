@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "simplemango:mango_checked",
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": "simplemango:mango_checked"
+      }
+    ]
+  }
+}

@@ -26,15 +26,14 @@ public class ModItems {
 
     public static final RegistryObject<Item> MANGO_SEED_HELMET = ITEMS.register("mango_seed_helmet",
             () -> new ModArmorItem(ModArmorMaterial.SEED, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(MangoItemGroup.MANGO)));
+                    new Item.Properties()));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
             () -> new Mango(new Item.Properties()
                     .food(new FoodProperties.Builder()
                             .nutrition(4)
                             .saturationMod(0.875f)
                             .build())
-                    .rarity(Rarity.COMMON)
-                    .tab(MangoItemGroup.MANGO)));
+                    .rarity(Rarity.COMMON)));
     public static final RegistryObject<Item> GOLDEN_MANGO = ITEMS.register("golden_mango",
             () -> new Mango(new Item.Properties()
                     .food(new FoodProperties.Builder()
@@ -44,8 +43,7 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 0), 1.0F)
                             .effect(new MobEffectInstance(MobEffects.ABSORPTION,2400,0),1.0f)
                             .effect(new MobEffectInstance(MobEffects.REGENERATION,100,1),1.0f)
-                            .build())
-                    .tab(MangoItemGroup.MANGO)));
+                            .build())));
     public static final RegistryObject<Item> ENCHANTED_GOLDEN_MANGO = ITEMS.register("enchanted_golden_mango",
             () -> new EnchantedGoldenMango(new Item.Properties()
                     .rarity(Rarity.UNCOMMON)
@@ -58,8 +56,7 @@ public class ModItems {
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,3600,0),1.0f)
                             .effect(new MobEffectInstance(MobEffects.DIG_SPEED,6000,1),1.0f)
                             .effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,3000,0),1.0f)
-                            .build())
-                    .tab(MangoItemGroup.MANGO)));
+                            .build())));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
