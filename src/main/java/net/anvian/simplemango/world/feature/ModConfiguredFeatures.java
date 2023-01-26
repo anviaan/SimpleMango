@@ -23,8 +23,8 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MANGO_KEY = registerKey("mango");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> MANGO_SPAWN_KEY = registerKey("mango_spawn");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MANGO_KEY = registerKey("mango_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MANGO_SPAWN_KEY = registerKey("mango_tree_spawn");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context){
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -38,8 +38,8 @@ public class ModConfiguredFeatures {
 
         register(context, MANGO_SPAWN_KEY, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(
-                        placedFeatures.getOrThrow(ModPlacedFeatures.MANGO_CHECKED_KEY),
-                        0.1F)), placedFeatures.getOrThrow(ModPlacedFeatures.MANGO_CHECKED_KEY)));
+                        placedFeatures.getOrThrow(ModPlacedFeatures.MANGO_TREE_CHECKED_KEY),
+                        0.1F)), placedFeatures.getOrThrow(ModPlacedFeatures.MANGO_TREE_CHECKED_KEY)));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

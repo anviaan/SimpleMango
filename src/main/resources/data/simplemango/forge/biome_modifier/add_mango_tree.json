@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes":"minecraft:forest",
-  "features": "simplemango:mango_placed",
+  "biomes": "minecraft:forest",
+  "features": "simplemango:mango_tree_placed",
   "step": "vegetal_decoration"
 }

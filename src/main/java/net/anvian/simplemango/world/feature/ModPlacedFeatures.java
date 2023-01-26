@@ -16,15 +16,15 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> MANGO_CHECKED_KEY = createKey("mango_checked");
-    public static final ResourceKey<PlacedFeature> MANGO_PLACED_KEY = createKey("mango_placed");
+    public static final ResourceKey<PlacedFeature> MANGO_TREE_CHECKED_KEY = createKey("mango_tree_checked");
+    public static final ResourceKey<PlacedFeature> MANGO_TREE_PLACED_KEY  = createKey("mango_tree_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context){
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, MANGO_CHECKED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MANGO_KEY),
+        register(context, MANGO_TREE_CHECKED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MANGO_KEY),
                 List.of(PlacementUtils.filteredByBlockSurvival(ModBlocks.MANGO_SAPLING.get())));
-        register(context, MANGO_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MANGO_KEY),
+        register(context, MANGO_TREE_PLACED_KEY , configuredFeatures.getOrThrow(ModConfiguredFeatures.MANGO_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(1, 0.2f, 1)));
     }
 

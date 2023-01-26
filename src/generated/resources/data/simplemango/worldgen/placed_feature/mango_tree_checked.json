@@ -1,5 +1,5 @@
 {
-  "feature": "simplemango:mango",
+  "feature": "simplemango:mango_tree",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",
