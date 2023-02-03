@@ -1,20 +1,12 @@
-# This is an example mods.toml file. It contains the data relating to the loading mods.
-# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
-# Find more information on toml format here:  https://github.com/toml-lang/toml
-# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml"
-
 loaderVersion="[40,)"
-# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="MIT"
-
 issueTrackerURL="https://github.com/anviaan/SimpleMango/issues"
 
 [[mods]]
 modId="simplemango"
 version="1.2.0"
 displayName="SimpleMango Mod"
-# A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
 updateJSONURL="https://anvian-page.netlify.app/forge/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/simple-mango"
 authors="anvian"
