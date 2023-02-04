@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[44,)"
-license="MIT"
+license="GNU GPLv3"
 issueTrackerURL="https://github.com/anviaan/SimpleMango/issues"
 [[mods]]
 modId="simplemango"
