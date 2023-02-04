@@ -12,6 +12,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,7 +25,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, SimpleMangoMod.MOD_ID);
 
     public static final RegistryObject<Block> BLOCKOFMANGO = registerBlock("blockofmango",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(0.3f)),
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2.0f, 3.0f)),
             MangoItemGroup.MANGO);
     //logs
     public static final RegistryObject<Block> MANGO_LOG  = registerBlock("mango_log",
