@@ -17,7 +17,7 @@
     "issues": "https://github.com/anviaan/SimpleMango/issues"
   },
 
-  "license": "MIT",
+  "license": "GNU GPLv3",
   "icon": "assets/simplemango/icon.png",
 
   "environment": "*",
