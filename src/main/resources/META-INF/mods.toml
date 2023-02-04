@@ -1,8 +1,7 @@
 modLoader="javafml"
 loaderVersion="[43,)"
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="MIT"
-
+license="GNU GPLv3"
 issueTrackerURL="https://github.com/anviaan/SimpleMango/issues"
 
 [[mods]]
