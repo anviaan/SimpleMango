@@ -13,10 +13,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
-
     //mangoblock
     public static final Block BLOCKOFMANGO = registerBlock("blockofmango",
-            new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f)));
+            new Block(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN).strength(2.0f, 3.0f)));
 
     //logs
     public static final Block MANGO_LOG = registerBlock("mango_log",
@@ -96,7 +95,6 @@ public class ModBlocks {
         return Registry.register(Registry.ITEM, new Identifier(MangoMod.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(MangoItemGroup.MANGO)));
     }
-
 
     public static void registerModBlocks(){
         System.out.println("Registering ModBlocks for " + MangoMod.MOD_ID);
