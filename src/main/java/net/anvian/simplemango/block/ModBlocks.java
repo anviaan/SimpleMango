@@ -27,7 +27,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, SimpleMangoMod.MOD_ID);
 
     public static final RegistryObject<Block> BLOCKOFMANGO = registerBlock("blockofmango",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(0.3f)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(2.0f, 3.0f)));
     //logs
     public static final RegistryObject<Block> MANGO_LOG  = registerBlock("mango_log",
             () -> new ModFlammableRotadedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
