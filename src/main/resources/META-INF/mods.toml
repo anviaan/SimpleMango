@@ -11,6 +11,7 @@ displayName="SimpleMango Mod"
 updateJSONURL="https://anvian-page.netlify.app/forge/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/simple-mango"
 authors="anvian"
+credits="PinhaColada2222"
 description="Adds a food Mango!, which has a new type of wood and a new fruit, new trades and more."
 
 [[dependencies.simplemango]]
