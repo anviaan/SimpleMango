@@ -2,10 +2,10 @@
   "itemGroup.mango": "Simple Mango Mod",
 
   "item.simplemango.mango": "Mango",
-  "item.simplemango.seed": "Semilla de Mango",
+  "item.simplemango.seed": "Semilla de mango",
   "item.simplemango.mango_seed_helmet": "Casco de semilla de Mango",
-  "item.simplemango.golden_mango": " Mango Dorado",
-  "item.simplemango.enchanted_golden_mango": "Mango Dorado Encantado",
+  "item.simplemango.golden_mango": " Mango dorado",
+  "item.simplemango.enchanted_golden_mango": "Mango dorado encantado",
 
   "block.simplemango.blockofmango" : "Bloque de mango",
   "block.simplemango.mango_log" : "Tronco de mango",
@@ -19,8 +19,8 @@
   "block.simplemango.mango_fence_gate" : "Puerta de valla de mango",
   "block.simplemango.mango_button" : "Botón de Mango",
   "block.simplemango.mango_pressure_plate" : "Placa de presión de mango",
-  "block.simplemango.mango_door" : "Puerta de MANGO",
-  "block.simplemango.mango_trapdoor" : "Trampilla de Mango",
-  "block.simplemango.mango_leaves": "Hojas de Mango",
-  "block.simplemango.mango_sapling": "Retoño de Mango"
+  "block.simplemango.mango_door" : "Puerta de mango",
+  "block.simplemango.mango_trapdoor" : "Trampilla de mango",
+  "block.simplemango.mango_leaves": "Hojas de mango",
+  "block.simplemango.mango_sapling": "Retoño de mango"
 }
