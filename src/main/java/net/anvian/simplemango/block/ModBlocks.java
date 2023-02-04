@@ -22,7 +22,7 @@ public class ModBlocks {
 
     //mangoblock
     public static final Block BLOCKOFMANGO = registerBlock("blockofmango",
-            new Block(FabricBlockSettings.of(Material.WOOD).strength(0.5f)));
+            new Block(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN).strength(2.0f, 3.0f)));
 
     //logs
     public static final Block MANGO_LOG = registerBlock("mango_log",
