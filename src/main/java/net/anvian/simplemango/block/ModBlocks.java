@@ -7,14 +7,15 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.class_8177;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.SignType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
@@ -60,25 +61,22 @@ public class ModBlocks {
             new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .sounds(BlockSoundGroup.WOOD)));
     public static final Block MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD), SoundEvents.BLOCK_FENCE_GATE_CLOSE, SoundEvents.BLOCK_FENCE_GATE_OPEN));
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f), SignType.OAK));
 
     //button
     public static final Block MANGO_BUTTON = registerBlock("mango_button",
-            new ButtonBlock(AbstractBlock.Settings.of(Material.DECORATION).noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD),
-                    30, true, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_OFF, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_ON));
+            new ButtonBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().strength(0.5f), class_8177.field_42823, 30, true));
 
     //pressure_plate
     public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.of(Material.WOOD).noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD),
-                    SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_ON));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.WOOD).noCollision().strength(0.5f), class_8177.field_42823));
 
     //door
     public static final Block MANGO_DOOR = registerBlock("mango_door",
-            new DoorBlock(AbstractBlock.Settings.of(Material.WOOD).strength(3.0f).sounds(BlockSoundGroup.WOOD).nonOpaque(), SoundEvents.BLOCK_WOODEN_DOOR_CLOSE, SoundEvents.BLOCK_WOODEN_DOOR_OPEN));
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(3.0f).nonOpaque(), class_8177.field_42823));
     //trapdoor
     public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            new TrapdoorBlock(AbstractBlock.Settings.of(Material.WOOD).strength(3.0f).sounds(BlockSoundGroup.WOOD).nonOpaque().allowsSpawning(ModBlocks::never), SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE, SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN));
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN).strength(3.0f).nonOpaque().allowsSpawning(ModBlocks::never), class_8177.field_42823));
 
     //leaves
     public static final Block MANGO_LEAVES = registerBlock("mango_leaves",
