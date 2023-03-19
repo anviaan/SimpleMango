@@ -7,7 +7,6 @@ import net.anvian.simplemango.item.custom.Mango;
 import net.anvian.simplemango.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -28,7 +27,7 @@ public static final Item SEED = registerItem("seed",new AliasedBlockItem(ModBloc
         new Item.Settings().rarity(Rarity.COMMON)));
 
     public static final Item MANGO_SEED_HELMET = registerItem("mango_seed_helmet",
-            new ModArmorItem(ModArmorMaterial.SEED, EquipmentSlot.HEAD,
+            new ModArmorItem(ModArmorMaterial.SEED, ArmorItem.Type.HELMET,
                      new FabricItemSettings()));
 
     public static final Item GOLDEN_MANGO =  registerItem("golden_mango",

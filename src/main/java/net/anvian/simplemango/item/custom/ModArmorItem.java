@@ -1,9 +1,8 @@
 package net.anvian.simplemango.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import net.anvian.simplemango.item.ModArmorMaterial;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -12,7 +11,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.anvian.simplemango.item.ModArmorMaterial;
 
 import java.util.Map;
 import java.util.Random;
@@ -22,8 +20,8 @@ public class ModArmorItem extends ArmorItem {
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
                     .put(ModArmorMaterial.SEED, StatusEffects.LUCK).build();
 
-    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
-        super(material, slot, settings);
+    public ModArmorItem(ArmorMaterial material, Type type, Settings settings) {
+        super(material, type, settings);
     }
 
     @Override
@@ -33,7 +31,7 @@ public class ModArmorItem extends ArmorItem {
                 PlayerEntity player = (PlayerEntity)entity;
 
                 if(hasHelmetArmorOn(player)) {
-                    evaluateArmorEffects(player);
+                    evaluateArmorEffects(world, player);
                 }
             }
         }
@@ -41,25 +39,25 @@ public class ModArmorItem extends ArmorItem {
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 
-    private void evaluateArmorEffects(PlayerEntity player) {
+    private void evaluateArmorEffects(World world, PlayerEntity player) {
         for (Map.Entry<ArmorMaterial, StatusEffect> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
             ArmorMaterial mapArmorMaterial = entry.getKey();
             StatusEffect mapStatusEffect = entry.getValue();
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
+                addStatusEffectForMaterial(world, player, mapArmorMaterial, mapStatusEffect);
             }
         }
     }
 
-    private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
+    private void addStatusEffectForMaterial(World world, PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
         boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
             player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 200));
 
             if(new Random().nextFloat() > 0.8f) { // 20% of damaging the armor Possibly
-                player.getInventory().damageArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
+                player.getInventory().damageArmor(world.getDamageSources().magic(), 1f, new int[]{0, 1, 2, 3});
             }
         }
     }
