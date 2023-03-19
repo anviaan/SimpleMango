@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.class_8177;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,7 +14,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.SignType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 
@@ -61,22 +59,22 @@ public class ModBlocks {
             new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
                     .sounds(BlockSoundGroup.WOOD)));
     public static final Block MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f), SignType.OAK));
+            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f), WoodType.OAK));
 
     //button
     public static final Block MANGO_BUTTON = registerBlock("mango_button",
-            new ButtonBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().strength(0.5f), class_8177.field_42823, 30, true));
+            new ButtonBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().strength(0.5f), BlockSetType.OAK, 30, true));
 
     //pressure_plate
     public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.WOOD).noCollision().strength(0.5f), class_8177.field_42823));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.WOOD).noCollision().strength(0.5f), BlockSetType.OAK));
 
     //door
     public static final Block MANGO_DOOR = registerBlock("mango_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(3.0f).nonOpaque(), class_8177.field_42823));
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(3.0f).nonOpaque(),  BlockSetType.OAK));
     //trapdoor
     public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN).strength(3.0f).nonOpaque().allowsSpawning(ModBlocks::never), class_8177.field_42823));
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN).strength(3.0f).nonOpaque().allowsSpawning(ModBlocks::never),  BlockSetType.OAK));
 
     //leaves
     public static final Block MANGO_LEAVES = registerBlock("mango_leaves",
