@@ -13,16 +13,13 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> MANGO_TREE_CHECKED_KEY = registerKey("mango_tree_checked");
     public static final RegistryKey<PlacedFeature> MANGO_TREE_PLACED_KEY = registerKey("mango_tree_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, MANGO_TREE_CHECKED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MANGO_KEY),
-                List.of(PlacedFeatures.wouldSurvive(ModBlocks.MANGO_SAPLING)));
         register(context, MANGO_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.MANGO_KEY),
-                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.2f, 1)));
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.2f, 1), ModBlocks.MANGO_SAPLING));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
