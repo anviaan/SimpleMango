@@ -1,5 +1,3 @@
-// 1.19.3	2023-01-25T21:22:13.798927	Registries
+// 1.19.4	2023-03-21T17:17:38.8309512	Registries
 9e7476d318a3a51fcd8f3f94ffa4f2c9d9e21c10 data/simplemango/worldgen/configured_feature/mango_tree.json
-5abf21c68472772ff3adacdc1889c2d15dfbcc98 data/simplemango/worldgen/configured_feature/mango_tree_spawn.json
-aa985643fcc7f9ad6902eacfcac5de79697432fe data/simplemango/worldgen/placed_feature/mango_tree_checked.json
-885de5dfc33e5f8a998b31675d22db8452d34691 data/simplemango/worldgen/placed_feature/mango_tree_placed.json
+7b02b4ae43662290ff850321d80092c650c620c2 data/simplemango/worldgen/placed_feature/mango_tree_key.json
