@@ -7,6 +7,5 @@ public class MangoModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModRenderHelper.setRenderLayers();
-
     }
 }
