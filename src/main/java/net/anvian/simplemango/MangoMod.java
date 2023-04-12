@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 public class MangoMod implements ModInitializer {
 	public static final String MOD_ID = "simplemango";
-	public static final Logger LOGGER = LogManager.getLogger("modid");
+	public static final Logger LOGGER = LogManager.getLogger("simplemango");
 
 	@Override
 	public void onInitialize() {

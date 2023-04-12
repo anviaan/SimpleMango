@@ -10,9 +10,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
-    SEED("seed", 20, new int[]{3, 5, 5, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.5F, 0.0F, () -> {
-        return Ingredient.ofItems(ModItems.SEED);
-    });
+    SEED("seed", 20, new int[]{3, 5, 5, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0.5F, 0.0F, () -> Ingredient.ofItems(ModItems.SEED));
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private final String name;
@@ -24,7 +22,7 @@ public enum ModArmorMaterial implements ArmorMaterial {
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    private ModArmorMaterial(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
+    ModArmorMaterial(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -52,7 +50,7 @@ public enum ModArmorMaterial implements ArmorMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredientSupplier.get();
+        return this.repairIngredientSupplier.get();
     }
 
     public String getName() {
