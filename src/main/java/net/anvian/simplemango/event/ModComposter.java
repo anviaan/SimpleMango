@@ -11,9 +11,7 @@ public class ModComposter extends ComposterBlock{
     }
 
     public static void init(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            registerCompostables();
-        });
+        event.enqueueWork(ModComposter::registerCompostables);
     }
     public static void registerCompostables(){
         ComposterBlock.COMPOSTABLES.put(ModItems.SEED.get(),0.25f);
