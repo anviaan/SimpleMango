@@ -20,8 +20,9 @@ public class Mango extends Item {
             return retval;
         }else{
             if (pLivingEntity instanceof Player player){
-                if (!player.isCreative() && !player.getInventory().add(retval))
+                if (!player.isCreative() && !player.getInventory().add(retval)){
                     player.drop(retval,false);
+                }
             }
         }
         return super.finishUsingItem(pStack, pLevel, pLivingEntity);
