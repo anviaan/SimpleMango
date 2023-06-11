@@ -1,7 +1,6 @@
 package net.anvian.simplemango.block;
 
 import net.anvian.simplemango.MangoMod;
-import net.anvian.simplemango.item.MangoItemGroup;
 import net.anvian.simplemango.world.features.tree.MangoSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -21,24 +20,24 @@ public class ModBlocks {
 
     //mangoblock
     public static final Block BLOCKOFMANGO = registerBlock("blockofmango",
-            new Block(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN).strength(2.0f, 3.0f)));
+            new Block(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).strength(2.0f, 3.0f)));
 
     //logs
     public static final Block MANGO_LOG = registerBlock("mango_log",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN)
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block MANGO_WOOD = registerBlock("mango_wood",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN)
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block STRIPPED_MANGO_LOG = registerBlock("stripped_mango_log",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN)
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block STRIPPED_MANGO_WOOD = registerBlock("stripped_mango_wood",
-            new PillarBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
-                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)));
+            new PillarBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN)
+                    .strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD).burnable()));
 
     public static final Block MANGO_PLANKS = registerBlock("mango_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
@@ -46,35 +45,35 @@ public class ModBlocks {
     //stair
     public static final Block MANGO_STAIR = registerBlock("mango_stair",
             new StairsBlock(ModBlocks.MANGO_PLANKS.getDefaultState(),
-                    FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
-                           .sounds(BlockSoundGroup.WOOD)));
+                    FabricBlockSettings.create().strength(2.0f, 3.0f)
+                           .sounds(BlockSoundGroup.WOOD).burnable()));
 
     //slab
     public static final Block MANGO_SLAB = registerBlock("mango_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f)
-                    .sounds(BlockSoundGroup.WOOD)));
+            new SlabBlock(FabricBlockSettings.create().strength(2.0f, 3.0f)
+                    .sounds(BlockSoundGroup.WOOD).burnable()));
 
     //fences
     public static final Block MANGO_FENCE = registerBlock("mango_fence",
-            new FenceBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 2.0f)
-                    .sounds(BlockSoundGroup.WOOD)));
+            new FenceBlock(FabricBlockSettings.create().strength(2.0f, 2.0f)
+                    .sounds(BlockSoundGroup.WOOD).burnable()));
     public static final Block MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.WOOD).strength(2.0f, 3.0f), WoodType.OAK));
+            new FenceGateBlock(FabricBlockSettings.create().burnable().strength(2.0f, 3.0f), WoodType.OAK));
 
     //button
     public static final Block MANGO_BUTTON = registerBlock("mango_button",
-            new ButtonBlock(FabricBlockSettings.of(Material.DECORATION).noCollision().strength(0.5f), BlockSetType.OAK, 30, true));
+            new ButtonBlock(FabricBlockSettings.create().burnable().noCollision().strength(0.5f), BlockSetType.OAK, 30, true));
 
     //pressure_plate
     public static final Block MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.WOOD).noCollision().strength(0.5f), BlockSetType.OAK));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.create().burnable().noCollision().strength(0.5f), BlockSetType.OAK));
 
     //door
     public static final Block MANGO_DOOR = registerBlock("mango_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD).strength(3.0f).nonOpaque(),  BlockSetType.OAK));
+            new DoorBlock(FabricBlockSettings.create().burnable().strength(3.0f).nonOpaque(),  BlockSetType.OAK));
     //trapdoor
     public static final Block MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN).strength(3.0f).nonOpaque().allowsSpawning(ModBlocks::never),  BlockSetType.OAK));
+            new TrapdoorBlock(FabricBlockSettings.create().burnable().mapColor(MapColor.OAK_TAN).strength(3.0f).nonOpaque().allowsSpawning(ModBlocks::never),  BlockSetType.OAK));
 
     //leaves
     public static final Block MANGO_LEAVES = registerBlock("mango_leaves",
@@ -100,7 +99,7 @@ public class ModBlocks {
     private static Item registerBlockItem(String name, Block block) {
         Item item = Registry.register(Registries.ITEM, new Identifier(MangoMod.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(MangoItemGroup.MANGO).register(entries -> entries.add(item));
+        ItemGroupEvents.modifyEntriesEvent(MangoMod.MANGO).register(entries -> entries.add(item));
         return item;
     }
 

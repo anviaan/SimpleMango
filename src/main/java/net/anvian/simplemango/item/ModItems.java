@@ -66,7 +66,7 @@ public static final Item SEED = registerItem("seed",new AliasedBlockItem(ModBloc
         addToItemGroup(MANGO_SEED_HELMET);
     }
     private static void addToItemGroup(Item item){
-        ItemGroupEvents.modifyEntriesEvent(MangoItemGroup.MANGO).register(entries -> entries.add(item));
+        ItemGroupEvents.modifyEntriesEvent(MangoMod.MANGO).register(entries -> entries.add(item));
     }
 
     public static void registerModItems(){
