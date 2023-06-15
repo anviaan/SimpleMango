@@ -14,7 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-
 @Mod(SimpleMangoMod.MOD_ID)
 public class SimpleMangoMod
 {
@@ -38,7 +37,7 @@ public class SimpleMangoMod
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("Hello from BedrockPlus!");
+        LOGGER.info("Hello from Simple Mango!");
     }
     private void addCreative(CreativeModeTabEvent.BuildContents even){
         if (even.getTab() == MangoItemGroup.MANGO){
