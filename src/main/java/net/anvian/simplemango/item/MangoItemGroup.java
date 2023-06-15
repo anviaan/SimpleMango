@@ -1,24 +1,26 @@
 package net.anvian.simplemango.item;
 
 import net.anvian.simplemango.SimpleMangoMod;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = SimpleMangoMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MangoItemGroup {
-    public static CreativeModeTab MANGO;
 
-    @SubscribeEvent
-    public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
-        MANGO = event.registerCreativeModeTab(new ResourceLocation(SimpleMangoMod.MOD_ID, "sculkhorn"),
-                builder -> builder
-                        .icon(()-> new ItemStack(ModItems.MANGO.get()))
-                        .title(Component.translatable("itemGroup.mango"))
-                        .build());
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,
+            SimpleMangoMod.MOD_ID);
+
+    public static RegistryObject<CreativeModeTab> MANGO = CREATIVE_MODE_TAB.register("mango", () ->
+            CreativeModeTab.builder()
+                    .icon(()-> new ItemStack(ModItems.MANGO.get()))
+                    .title(Component.translatable("itemGroup.mango"))
+                    .build());
+
+    public static void register(IEventBus eventBus){
+        CREATIVE_MODE_TAB.register(eventBus);
     }
 }

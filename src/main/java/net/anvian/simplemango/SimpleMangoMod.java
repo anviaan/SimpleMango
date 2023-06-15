@@ -7,10 +7,10 @@ import net.anvian.simplemango.event.loot.ModLootModifiers;
 import net.anvian.simplemango.item.MangoItemGroup;
 import net.anvian.simplemango.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -23,6 +23,8 @@ public class SimpleMangoMod
 
     public SimpleMangoMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        MangoItemGroup.register(eventBus);
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
@@ -40,8 +42,8 @@ public class SimpleMangoMod
     {
         LOGGER.info("Hello from BedrockPlus!");
     }
-    private void addCreative(CreativeModeTabEvent.BuildContents even){
-        if (even.getTab() == MangoItemGroup.MANGO){
+    private void addCreative(BuildCreativeModeTabContentsEvent even){
+        if (even.getTab() == MangoItemGroup.MANGO.get()){
             even.accept(ModItems.MANGO);
             even.accept(ModItems.GOLDEN_MANGO);
             even.accept(ModItems.ENCHANTED_GOLDEN_MANGO);

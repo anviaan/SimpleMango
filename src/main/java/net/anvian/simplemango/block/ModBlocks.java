@@ -15,8 +15,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -74,33 +74,33 @@ public class ModBlocks {
 
     //sapling
     public static final RegistryObject<Block> MANGO_SAPLING = registerBlock("mango_sapling",
-            () -> new SaplingBlock(new MangoTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT)
-                    .noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+            () -> new SaplingBlock(new MangoTreeGrower(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT)
+                    .noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
     //stairs
     public static final RegistryObject<Block> MANGO_STAIR = registerBlock("mango_stair",
             () -> new StairBlock(() -> ModBlocks.MANGO_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
     //slab
     public static final RegistryObject<Block> MANGO_SLAB = registerBlock("mango_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD)
+            () -> new SlabBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD)
                     .strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     //fence
     public static final RegistryObject<Block> MANGO_FENCE = registerBlock("mango_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+            () -> new FenceBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> MANGO_FENCE_GATE = registerBlock("mango_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F, 3.0F), WoodType.OAK));
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F, 3.0F), WoodType.OAK));
     //button
     public static final RegistryObject<Block> MANGO_BUTTON = registerBlock("mango_button",
-            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.DECORATION).noCollission().strength(0.5F), BlockSetType.OAK, 30, true));
+            () -> new ButtonBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().strength(0.5F), BlockSetType.OAK, 30, true));
     //pressure_plate
     public static final RegistryObject<Block> MANGO_PRESSURE_PLATE = registerBlock("mango_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).noCollission().strength(0.5F), BlockSetType.OAK));
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).noCollission().strength(0.5F), BlockSetType.OAK));
     //door
     public static final RegistryObject<Block> MANGO_DOOR = registerBlock("mango_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F).noOcclusion(), BlockSetType.OAK));
+            () -> new DoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(3.0F).noOcclusion(), BlockSetType.OAK));
     //trapdoor
     public static final RegistryObject<Block> MANGO_TRAPDOOR = registerBlock("mango_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD).strength(3.0F).noOcclusion().isValidSpawn(ModBlocks::never), BlockSetType.OAK));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(3.0F).noOcclusion().isValidSpawn(ModBlocks::never), BlockSetType.OAK));
     
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
