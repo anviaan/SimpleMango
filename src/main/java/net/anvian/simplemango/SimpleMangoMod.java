@@ -40,7 +40,7 @@ public class SimpleMangoMod
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("Hello from BedrockPlus!");
+        LOGGER.info("Hello from SimpleMango Mod!");
     }
     private void addCreative(BuildCreativeModeTabContentsEvent even){
         if (even.getTab() == MangoItemGroup.MANGO.get()){
