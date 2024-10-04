@@ -1,6 +1,6 @@
 package net.anvian.simplemango.world.features;
 
-import net.anvian.simplemango.MangoMod;
+import net.anvian.simplemango.SimpleMango;
 import net.anvian.simplemango.block.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -29,7 +29,7 @@ public class ModConfiguredFeatures {
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(MangoMod.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(SimpleMango.MOD_ID, name));
     }
 
     private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,

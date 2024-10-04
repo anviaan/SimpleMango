@@ -8,6 +8,7 @@ import net.anvian.simplemango.util.ModFlammableBlock;
 import net.anvian.simplemango.util.ModLootTableModifiers;
 import net.anvian.simplemango.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
+
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -20,14 +21,14 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MangoMod implements ModInitializer {
-	public 	static final String MOD_ID = "simplemango";
+public class SimpleMango implements ModInitializer {
+	public static final String MOD_ID = "simplemango";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final RegistryKey<ItemGroup> MANGO = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "mango_item_group"));
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello from SimpleMangoMod!");
+		LOGGER.info("Hello from Simple Mango Mod!");
 
 		Registry.register(Registries.ITEM_GROUP, MANGO, FabricItemGroup.builder()
 				.icon(()-> new ItemStack(ModItems.MANGO))

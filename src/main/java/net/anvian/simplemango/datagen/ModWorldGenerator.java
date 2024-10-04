@@ -1,6 +1,6 @@
 package net.anvian.simplemango.datagen;
 
-import net.anvian.simplemango.MangoMod;
+import net.anvian.simplemango.SimpleMango;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.minecraft.registry.RegistryKeys;
@@ -21,6 +21,6 @@ public class ModWorldGenerator extends FabricDynamicRegistryProvider {
 
     @Override
     public String getName() {
-        return MangoMod.MOD_ID;
+        return SimpleMango.MOD_ID;
     }
 }

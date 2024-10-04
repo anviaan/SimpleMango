@@ -1,6 +1,6 @@
 package net.anvian.simplemango.block;
 
-import net.anvian.simplemango.MangoMod;
+import net.anvian.simplemango.SimpleMango;
 import net.anvian.simplemango.world.features.tree.MangoSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -90,20 +90,20 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(MangoMod.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(SimpleMango.MOD_ID, name), block);
     }
     private static Block registerBlockWithoutItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, new Identifier(MangoMod.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(SimpleMango.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(MangoMod.MOD_ID, name),
+        Item item = Registry.register(Registries.ITEM, new Identifier(SimpleMango.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(MangoMod.MANGO).register(entries -> entries.add(item));
+        ItemGroupEvents.modifyEntriesEvent(SimpleMango.MANGO).register(entries -> entries.add(item));
         return item;
     }
 
     public static void registerModBlocks(){
-        System.out.println("Registering ModBlocks for " + MangoMod.MOD_ID);
+        System.out.println("Registering ModBlocks for " + SimpleMango.MOD_ID);
     }
 }
