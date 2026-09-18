@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "simplemango",
+  "version": "${version}",
+  "name": "Simple Mango",
+  "description": "Adds a food Mango!, which has a new type of wood and a new fruit, new trades and more",
+  "authors": ["anvian"],
+  "contributors": ["PinhaColada2222"],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/simple-mango",
+    "sources": "https://github.com/anviaan/SimpleMango",
+    "issues": "https://github.com/anviaan/SimpleMango/issues"
+  },
+  "license": "GNU GPLv3",
+  "icon": "assets/simplemango/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.anvian.simplemango.fabric.MangoModFabric"],
+    "client": ["net.anvian.simplemango.fabric.MangoModFabricClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "fabric": "*",
+    "minecraft": ">=1.19 <1.19.3",
+    "java": ">=17",
+    "anvianslib": ">=1.4"
+  }
+}

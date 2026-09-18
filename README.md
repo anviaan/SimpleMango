@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Fabric-1.17.2-green?style=for-the-badge)![](https://img.shields.io/badge/-1.18.2-green?style=for-the-badge)![](https://img.shields.io/badge/-1.19.4-green?style=for-the-badge)                 ![](https://img.shields.io/badge/Forge-1.18.2-orange?style=for-the-badge)![](https://img.shields.io/badge/-1.19.4-orange?style=for-the-badge)
+![](https://img.shields.io/badge/Fabric-1.19-green?style=for-the-badge)![](https://img.shields.io/badge/-1.19.1-green?style=for-the-badge)![](https://img.shields.io/badge/-1.19.2-green?style=for-the-badge)                 ![](https://img.shields.io/badge/Forge-1.19-orange?style=for-the-badge)![](https://img.shields.io/badge/-1.19.1-orange?style=for-the-badge)![](https://img.shields.io/badge/-1.19.2-orange?style=for-the-badge)
 
 **Simple Mango**
 

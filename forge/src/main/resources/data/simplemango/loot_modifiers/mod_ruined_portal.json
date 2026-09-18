@@ -1,0 +1,10 @@
+{
+  "type": "simplemango:mod_ruined_portal",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/ruined_portal"
+    }
+  ],
+  "item": "simplemango:enchanted_golden_mango"
+}
