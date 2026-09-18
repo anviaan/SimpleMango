@@ -46,3 +46,24 @@ shadowJar {
 remapJar {
     inputFile.set shadowJar.archiveFile
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = "${base.archivesName.get()}-${rootProject.minecraft_version}"
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = "Reposilite"
+            url = uri(version.toString().endsWith("SNAPSHOT") ?
+                    "https://maven.anvian.net/snapshots" :
+                    "https://maven.anvian.net/releases")
+            credentials {
+                username = (project.findProperty("reposilite.user") as String) ?: System.getenv("REPOSILITE_USER")
+                password = (project.findProperty("reposilite.token") as String) ?: System.getenv("REPOSILITE_TOKEN")
+            }
+        }
+    }
+}
