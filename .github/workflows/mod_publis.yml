@@ -44,7 +44,11 @@ jobs:
 
           echo "mod_version=${MOD_VERSION}" >> "$GITHUB_OUTPUT"
           echo "release_name=${RELEASE_NAME}" >> "$GITHUB_OUTPUT"
-          echo "game_versions=${GAME_VERSIONS}" >> "$GITHUB_OUTPUT"
+          {
+            echo "game_versions<<EOF"
+            echo "${GAME_VERSIONS//,/$'\n'}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Build
         run: ./gradlew build --no-daemon
