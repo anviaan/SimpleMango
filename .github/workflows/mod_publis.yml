@@ -92,6 +92,7 @@ jobs:
           name: ${{ needs.build.outputs.release_name }}
           version: ${{ needs.build.outputs.mod_version }}
           version-type: release
+          changelog-file: CHANGELOG.md
           game-versions: ${{ needs.build.outputs.game_versions }}
           loaders: fabric
           dependencies: |
@@ -124,6 +125,7 @@ jobs:
           name: ${{ needs.build.outputs.release_name }}
           version: ${{ needs.build.outputs.mod_version }}
           version-type: release
+          changelog-file: CHANGELOG.md
           game-versions: ${{ needs.build.outputs.game_versions }}
           loaders: forge
           dependencies: anvians-lib

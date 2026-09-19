@@ -1,0 +1,3 @@
+- Fixed Forge update metadata to use the Modrinth Forge updates endpoint.
+- Fixed the Forge mod-list crash caused by a path-based logo resource.
+- Replaced the Fabric and Forge mod icon with the new Mango icon.
